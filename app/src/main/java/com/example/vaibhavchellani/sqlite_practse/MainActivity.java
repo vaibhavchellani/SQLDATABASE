@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText editText;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void printdatabase(){
         String dbString=db.databaseToString();
+        Toast.makeText(this, dbString, Toast.LENGTH_SHORT).show();
         textView.setText(dbString);
         editText.setText("");
 
